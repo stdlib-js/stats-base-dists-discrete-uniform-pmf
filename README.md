@@ -72,7 +72,9 @@ If no recognized module system is present, access bundle contents via the global
 ```html
 <script type="text/javascript">
 (function () {
+(function () {
     window.pmf;
+})();
 })();
 </script>
 ```
@@ -150,6 +152,7 @@ y = myPDF( 5.0 );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
+(function () {
 
 var randa = randint.factory( 0, 10 );
 var randb = randint.factory();
@@ -167,6 +170,7 @@ for ( i = 0; i < 25; i++ ) {
     console.log( 'x: %d, a: %d, b: %d, P(X=x;a,b): %d', x.toFixed( 4 ), a.toFixed( 4 ), b.toFixed( 4 ), y.toFixed( 4 ) );
 }
 
+})();
 })();
 </script>
 </body>
