@@ -58,20 +58,32 @@ where `a` is the minimum support and `b` is the maximum support of the distribut
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-discrete-uniform-pmf
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import pmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@deno/mod.js';
+var pmf = require( '@stdlib/stats-base-dists-discrete-uniform-pmf' );
 ```
 
 #### pmf( x, a, b )
@@ -140,8 +152,8 @@ y = myPDF( 5.0 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import randint from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
-import pmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@deno/mod.js';
+var randint = require( '@stdlib/random-base-discrete-uniform' );
+var pmf = require( '@stdlib/stats-base-dists-discrete-uniform-pmf' );
 
 var randa = randint.factory( 0, 10 );
 var randb = randint.factory();
@@ -156,13 +168,119 @@ for ( i = 0; i < 25; i++ ) {
     x = randb( a, a+randa() );
     b = randb( a, a+randa() );
     y = pmf( x, a, b );
-    console.log( 'x: %d, a: %d, b: %d, P(X=x;a,b): %d', x.toFixed( 4 ), a.toFixed( 4 ), b.toFixed( 4 ), y.toFixed( 4 ) );
+    console.log( 'x: %d, a: %d, b: %d, P(X=x;a,b): %d', x, a, b, y.toFixed( 4 ) );
 }
 ```
 
 </section>
 
 <!-- /.examples -->
+
+<!-- C interface documentation. -->
+
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/stats/base/dists/discrete-uniform/pmf.h"
+```
+
+#### stdlib_base_dists_discrete_uniform_pmf( x, a, b )
+
+Evaluates the [probability mass function][pmf] (PMF) for a [discrete uniform][discrete-uniform-distribution] distribution with parameters `a` (minimum support) and `b` (maximum support).
+
+```c
+double out = stdlib_base_dists_discrete_uniform_pmf( 2.0, 0, 4 );
+// returns ~0.2
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] double` input value.
+-   **a**: `[in] int32_t` minimum support.
+-   **b**: `[in] int32_t` maximum support.
+
+```c
+double stdlib_base_dists_discrete_uniform_pmf( const double x, const int32_t a, const int32_t b );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/stats/base/dists/discrete-uniform/pmf.h"
+#include "stdlib/math/base/special/round.h"
+#include <stdint.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+static double random_uniform( const double min, const double max ) {
+    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
+    return min + ( v*(max-min) );
+}
+
+int main( void ) {
+    int32_t a;
+    int32_t b;
+    double x;
+    double y;
+    int i;
+
+    for ( i = 0; i < 10; i++ ) {
+        a = stdlib_base_round( random_uniform( 0.0, 10.0 ) );
+        b = stdlib_base_round( random_uniform( a, a+10.0 ) );
+        x = stdlib_base_round( random_uniform( a*1.0, b*1.0 ) );
+        y = stdlib_base_dists_discrete_uniform_logpmf( x, a, b );
+        printf( "x:%lf, a: %d, b: %d, P(X=x;a,b): %lf\n", x, a, b, y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
+
+<!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="references">
+
+</section>
+
+<!-- /.references -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -181,7 +299,7 @@ for ( i = 0; i < 25; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
