@@ -4,7 +4,29 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-24)
+## Unreleased (2025-06-22)
+
+<section class="features">
+
+### Features
+
+-   [`582a3fa`](https://github.com/stdlib-js/stdlib/commit/582a3fa88c2c9d375fa1384d97d1f792ccf0ee0e) - add C implementation for `stats/base/dists/discrete-uniform/pmf` [(#4664)](https://github.com/stdlib-js/stdlib/pull/4664)
+
+</section>
+
+<!-- /.features -->
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#3557](https://github.com/stdlib-js/stdlib/issues/3557)
+
+</section>
+
+<!-- /.issues -->
 
 <section class="commits">
 
@@ -12,6 +34,7 @@
 
 <details>
 
+-   [`582a3fa`](https://github.com/stdlib-js/stdlib/commit/582a3fa88c2c9d375fa1384d97d1f792ccf0ee0e) - **feat:** add C implementation for `stats/base/dists/discrete-uniform/pmf` [(#4664)](https://github.com/stdlib-js/stdlib/pull/4664) _(by Prashant Kumar Yadav, Philipp Burckhardt)_
 -   [`13c0b92`](https://github.com/stdlib-js/stdlib/commit/13c0b92efadf3a6d4c83322c32ebc4071950b403) - **bench:** refactor random number generation in `stats/base/dists/discrete-uniform` [(#4887)](https://github.com/stdlib-js/stdlib/pull/4887) _(by Karan Anand)_
 
 </details>
@@ -24,9 +47,11 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Karan Anand
+-   Philipp Burckhardt
+-   Prashant Kumar Yadav
 
 </section>
 
