@@ -2,9 +2,9 @@
 
 > Package changelog.
 
-<section class="release" id="unreleased">
+<section class="release" id="v0.3.0">
 
-## Unreleased (2025-07-28)
+## 0.3.0 (2026-01-29)
 
 <section class="features">
 
@@ -34,6 +34,9 @@ This release closes the following issue:
 
 <details>
 
+-   [`fc438e0`](https://github.com/stdlib-js/stdlib/commit/fc438e0edbad0689d6923d6f3edb959b96597662) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
+-   [`07f7c05`](https://github.com/stdlib-js/stdlib/commit/07f7c0522c73e6ad9505e1d45035ae439344200d) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
+-   [`9c21fd2`](https://github.com/stdlib-js/stdlib/commit/9c21fd20ef8b8a6a88abb96d80ea6d8e4c5434eb) - **test:** use .strictEqual() instead of .equal() _(by Philipp Burckhardt)_
 -   [`582a3fa`](https://github.com/stdlib-js/stdlib/commit/582a3fa88c2c9d375fa1384d97d1f792ccf0ee0e) - **feat:** add C implementation for `stats/base/dists/discrete-uniform/pmf` [(#4664)](https://github.com/stdlib-js/stdlib/pull/4664) _(by Prashant Kumar Yadav, Philipp Burckhardt)_
 -   [`13c0b92`](https://github.com/stdlib-js/stdlib/commit/13c0b92efadf3a6d4c83322c32ebc4071950b403) - **bench:** refactor random number generation in `stats/base/dists/discrete-uniform` [(#4887)](https://github.com/stdlib-js/stdlib/pull/4887) _(by Karan Anand)_
 
