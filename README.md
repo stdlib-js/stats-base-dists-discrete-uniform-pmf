@@ -65,13 +65,18 @@ where `a` is the minimum support and `b` is the maximum support of the distribut
 ## Usage
 
 ```javascript
+import pmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-base-dists-discrete-uniform-pmf/tags). For example,
+
+```javascript
 import pmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@v0.3.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@v0.3.1-deno/mod.js';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@deno/mod.js';
 ```
 
 #### pmf( x, a, b )
@@ -141,7 +146,7 @@ y = myPDF( 5.0 );
 
 ```javascript
 import randint from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
-import pmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@v0.3.1-deno/mod.js';
+import pmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@deno/mod.js';
 
 var randa = randint.factory( 0, 10 );
 var randb = randint.factory();
