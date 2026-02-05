@@ -65,13 +65,13 @@ where `a` is the minimum support and `b` is the maximum support of the distribut
 ## Usage
 
 ```javascript
-import pmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@esm/index.mjs';
+import pmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@v0.3.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@esm/index.mjs';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@v0.3.1-esm/index.mjs';
 ```
 
 #### pmf( x, a, b )
@@ -146,7 +146,7 @@ y = myPDF( 5.0 );
 <script type="module">
 
 import randint from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
-import pmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@esm/index.mjs';
+import pmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-pmf@v0.3.1-esm/index.mjs';
 
 var randa = randint.factory( 0, 10 );
 var randb = randint.factory();
