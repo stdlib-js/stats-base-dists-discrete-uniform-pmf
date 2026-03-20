@@ -260,7 +260,7 @@ int main( void ) {
         a = stdlib_base_round( random_uniform( 0.0, 10.0 ) );
         b = stdlib_base_round( random_uniform( a, a+10.0 ) );
         x = stdlib_base_round( random_uniform( a*1.0, b*1.0 ) );
-        y = stdlib_base_dists_discrete_uniform_logpmf( x, a, b );
+        y = stdlib_base_dists_discrete_uniform_pmf( x, a, b );
         printf( "x:%lf, a: %d, b: %d, P(X=x;a,b): %lf\n", x, a, b, y );
     }
 }
@@ -309,6 +309,11 @@ For more information on the project, filing bug reports and feature requests, an
 
 ---
 
+## License
+
+See [LICENSE][stdlib-license].
+
+
 ## Copyright
 
 Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
@@ -354,6 +359,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [esm-url]: https://github.com/stdlib-js/stats-base-dists-discrete-uniform-pmf/tree/esm
 [esm-readme]: https://github.com/stdlib-js/stats-base-dists-discrete-uniform-pmf/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/stats-base-dists-discrete-uniform-pmf/blob/main/branches.md
+
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/stats-base-dists-discrete-uniform-pmf/main/LICENSE
 
 [pmf]: https://en.wikipedia.org/wiki/Probability_mass_function
 

@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-03-13)
+## Unreleased (2026-03-20)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`63f5705`](https://github.com/stdlib-js/stdlib/commit/63f57057daef3619f73ca34773de66111ba61571) - **docs:** fix C example in `stats/base/dists/discrete-uniform/pmf` [(#11052)](https://github.com/stdlib-js/stdlib/pull/11052) _(by Om-A-osc)_
 -   [`570b077`](https://github.com/stdlib-js/stdlib/commit/570b077ce3411575a1c45bc04c3da1b1fc827db3) - **bench:** refactor to use string interpolation in `stats/base/dists/discrete-uniform` [(#10345)](https://github.com/stdlib-js/stdlib/pull/10345) _(by Vishal Gaikwad, Athan Reines)_
 
 </details>
@@ -24,9 +25,10 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Om-A-osc
 -   Vishal Gaikwad
 
 </section>
